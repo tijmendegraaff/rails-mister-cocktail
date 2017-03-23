@@ -1,12 +1,12 @@
 class CocktailsController < ApplicationController
-  before_action :load_cocktail, only: [:show, :edit, :update, :destroy]
+  before_action :load_cocktail, only: [:show]
 
   def index
     @cocktails = Cocktail.all
   end
 
   def show
-
+    @dose = Dose.new
   end
 
   def new

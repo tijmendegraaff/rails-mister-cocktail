@@ -1,4 +1,19 @@
 <div class="row">
   <h2><%= @cocktail.name %></h2>
+  <div class="col-xs-6">
+
+<%= simple_form_for [@cocktail, @dose] do |f| %>
+  <%= f.input :description %>
+  <%= f.input :ingredient_id, collection: Ingredient.all %>
+  <%= f.submit "add a dose", class: "btn btn-primary" %>
+<% end %>
+
+<% @cocktail.doses.each do |dose| %>
+  <p><%= dose.description + dose.ingredient.name %></p>
+  <% end %>
+</div>
+
   <%= link_to "Go back", cocktails_path, :class => "btn btn-primary" %>
 </div>
+
+<!-- , :collection => %w[] -->
