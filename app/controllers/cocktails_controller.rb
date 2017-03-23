@@ -6,6 +6,7 @@ class CocktailsController < ApplicationController
   end
 
   def show
+
   end
 
   def new
@@ -25,5 +26,9 @@ class CocktailsController < ApplicationController
 
   def cocktail_params
     params.require(:cocktail).permit(:name)
+  end
+
+  def load_cocktail
+    @coacktail = Cocktail.find(params[:id])
   end
 end
