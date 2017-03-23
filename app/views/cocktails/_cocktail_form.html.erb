@@ -1,8 +1,4 @@
-<div class="row">
-<div class="col-xs-12">
 <%= simple_form_for [@cocktail] do |f| %>
-  <%= f.input :name %>
+  <%= f.input :name, placeholder: "Moscow mule" %>
   <%= f.submit "add a coacktail", class: "btn btn-primary" %>
 <% end %>
-</div>
-</div>
