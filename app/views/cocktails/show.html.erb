@@ -5,10 +5,11 @@
 
       <%= render 'cocktails/dose_form' %>
       <%= link_to 'Back', cocktails_path, :class => "pull-right", :id => "move-up" %>
-      <ul class="padded">
+      <ul class="list-group padded">
       <% @cocktail.doses.each do |dose| %>
         <% if dose.persisted? %>
-          <li><%= dose.description + " " + dose.ingredient.name %><%= link_to "Delete", dose_path(dose), method: :delete, data: { confirm: "Are you sure?" }, :class => "btn btn-danger btn-xs pull-right" %></p>
+          <li class= "list-group-item">
+          <%= dose.description + " " + dose.ingredient.name %><%= link_to "Delete", dose_path(dose), method: :delete, data: { confirm: "Are you sure?" }, :class => "btn btn-danger btn-xs pull-right" %>
           </li>
         <% end %>
       <% end %>
