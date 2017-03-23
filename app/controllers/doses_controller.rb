@@ -7,4 +7,11 @@ class DosesController < ApplicationController
 
   def destroy
   end
+
+  private
+
+  def dose_params
+    params.require(:dose).permit(:description)
+  end
+
 end
