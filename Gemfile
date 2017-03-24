@@ -31,6 +31,7 @@ gem 'turbolinks', '~> 5'
 gem 'annotate'
 gem 'figaro'
 gem 'cloudinary'
+gem 'carrierwave', '~> 0.11.2'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 # gem 'jbuilder', '~> 2.5'
 
