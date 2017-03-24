@@ -30,6 +30,7 @@ gem 'jquery-rails'
 gem 'turbolinks', '~> 5'
 gem 'annotate'
 gem 'figaro'
+gem 'cloudinary'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 # gem 'jbuilder', '~> 2.5'
 
